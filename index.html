@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pacientes - Clínica</title>
+    <title>Sistema Clínica - Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Cadastro de Paciente</h1>
         <form id="pacienteForm">
-           <input type="text" id="nome" placeholder="Nome Completo" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <input type="tel" id="telefone" placeholder="Telefone" required>
+            <div class="input-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Digite o nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="exemplo@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telefone">Telefone/Celular:</label>
+                <input type="text" id="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <button type="submit" id="btnCadastrar">Cadastrar Paciente</button>
         </form>
         <p id="mensagem"></p>
     </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="server.js"></script>
 </body>
-</html>
 </html>
